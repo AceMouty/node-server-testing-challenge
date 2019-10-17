@@ -16,11 +16,15 @@ describe('hobits DB access', () => {
       .truncate()
     })
 
+    // Insert Test 1: The DB should be empty
+    it("Should be empty when we first pull data from the database", async () => {
+      const records = await db('hobbits');
+      expect(records).toHaveLength(0);
+    })
+
+    // Insert Test 2: We insert data and pull all data, we should only have 2 records in the DB
     it("Should add provided hobbit ot the database", async () => {
       
-      // const records = await db('hobbits');
-      // expect(records).toHaveLength(0)
-
       let hobbit = await Hobbits.insert({name: 'Sam'})
       expect(hobbit.name).toBe('Sam')
 
@@ -32,5 +36,6 @@ describe('hobits DB access', () => {
 
     })
   })
+
 
 })
