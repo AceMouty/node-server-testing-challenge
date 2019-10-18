@@ -7,7 +7,7 @@ describe('hobits DB access', () => {
     expect(process.env.DB_ENV).toBe('testing')
   })
   
-  // Insert test's
+  // DB Access Insert test's
   describe('insert method', () => {
 
      // before the test clean out a table
@@ -40,7 +40,7 @@ describe('hobits DB access', () => {
     })
   })
 
-  // Delet test's
+  // DB Access Delet test's
   describe('delte method', () => {
 
     beforeEach( async () => {

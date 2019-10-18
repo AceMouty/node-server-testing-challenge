@@ -4,9 +4,13 @@ module.exports = {
 
   development: {
     client: 'sqlite3',
+    useNullAsDefault: true,
     connection: {
-      filename: './dev.sqlite3'
-    }
+      filename: './hobbits.sqlite3'
+    },
+    migrations: {
+      directory: './database/dev/migrations',
+    },
   },
 
   // inserted for the use of testing
