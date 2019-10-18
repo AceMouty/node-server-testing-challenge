@@ -6,7 +6,7 @@ module.exports = {
     client: 'sqlite3',
     useNullAsDefault: true,
     connection: {
-      filename: './hobbits.sqlite3'
+      filename: './database/hobbits.sqlite3'
     },
     migrations: {
       directory: './database/dev/migrations',
